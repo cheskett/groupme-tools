@@ -32,7 +32,7 @@ def printTranscript(messages):
         else:
             favorites_padded = ''
 
-        if message[u'picture_url'] is not None:
+        if message.get(u'picture_url', None) is not None:
             pic = ' ; photo URL ' + message[u'picture_url']
         else:
             pic = ''

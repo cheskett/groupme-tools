@@ -64,7 +64,9 @@ oldestId" to continue fetching the past).]
     complete = False
     pageCount = 0
 
-    endpoint = 'https://v2.groupme.com/groups/' + group + '/messages'
+    #endpoint = 'https://v2.groupme.com/groups/' + group + '/messages'
+    endpoint = 'https://api.groupme.com/v3/groups/' + group + '/messages'
+    
     headers = {
         'Accept': 'application/json, text/javascript',
         'Accept-Charset': 'ISO-8859-1,utf-8',
