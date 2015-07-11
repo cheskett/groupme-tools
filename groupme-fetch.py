@@ -66,6 +66,7 @@ oldestId" to continue fetching the past).]
 
     #endpoint = 'https://v2.groupme.com/groups/' + group + '/messages'
     endpoint = 'https://api.groupme.com/v3/groups/' + group + '/messages'
+    #endpoint = 'https://api.groupme.com/v3/direct_messages?other_user_id=' + group
     
     headers = {
         'Accept': 'application/json, text/javascript',
@@ -103,6 +104,7 @@ oldestId" to continue fetching the past).]
             onRequestError(r)
 
         response = r.json()
+        #messages = response[u'response'][u'direct_messages']
         messages = response[u'response'][u'messages']
 
         if stopId is not None:
